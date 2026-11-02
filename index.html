@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberPXE | Formatação e Boot em Massa via Rede Sem Limites</title>
+    <meta name="description" content="A central definitiva de implantação e boot PXE em rede. Formate até 50 computadores simultaneamente sem pendrive, com suporte a ISO, WIM, Sergei Strelec e bypass Windows 11.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container announcement-content">
+            <span class="badge-glow">NOVO</span>
+            <span>🚀 <strong>CyberPXE 2.0 Lançado!</strong> Suporte nativo a WinPE Sergei Strelec, WIMboot Microsoft e Bypass Windows 11 sem limites de PCs.</span>
+            <a href="#precos" class="announcement-link">Garantir Licença &rarr;</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="brand">
+                <div class="brand-icon">⚡</div>
+                <div class="brand-text">
+                    <span class="brand-name">CYBER<span>PXE</span></span>
+                    <span class="brand-sub">DEPLOYMENT MATRIX</span>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a href="#recursos" class="nav-link">Recursos</a>
+                <a href="#como-funciona" class="nav-link">Como Funciona</a>
+                <a href="#comparativo" class="nav-link">Comparativo</a>
+                <a href="#simulador" class="nav-link">Simulador de Lucro</a>
+                <a href="#recursos" class="nav-link">Recursos</a>
+                <a href="#precos" class="nav-link">Planos</a>
+                <a href="#faq" class="nav-link">Dúvidas</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="#precos" class="btn btn-primary pulse-btn">QUERO NA MINHA BANCADA</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="cyber-grid-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="status-dot"></span>
+                <span>TECNOLOGIA PXE PROFISSIONAL DE BANCADA</span>
+            </div>
+            <h1 class="hero-title">
+                Chega de perder horas com pendrives.<br>
+                <span class="highlight-text">Formate até 50 computadores</span><br>
+                ao mesmo tempo direto pela rede.
+            </h1>
+            <p class="hero-subtitle">
+                O <strong>CyberPXE</strong> transforma seu computador ou notebook em um poderoso servidor autônomo de boot. Conecte os cabos de rede, aperte F12 no cliente e instale Windows 10/11 ou suba o <strong>Sergei Strelec</strong> com a sua própria marca e papel de parede na tela.
+            </p>
+
+            <div class="hero-cta-group">
+                <a href="#precos" class="btn btn-cta">
+                    <span class="btn-icon">⚡</span>
+                    <span class="btn-text">
+                        <strong>GARANTIR MINHA LICENÇA VITALÍCIA</strong>
+                        <small>Acesso imediato • Chave autônoma • Sem mensalidade</small>
+                    </span>
+                </a>
+                <a href="#video-demo" class="btn btn-secondary">
+                    <span class="btn-play">▶</span>
+                    <span>Ver Vídeo em Ação</span>
+                </a>
+            </div>
+
+            <!-- Trust Highlights -->
+            <div class="hero-features-chips">
+                <div class="chip">✓ Versão Free (Até 5 PCs) • PRO Ilimitada</div>
+                <div class="chip">✓ Bypass Windows 11 (Sem TPM e Conta)</div>
+                <div class="chip">✓ Suporte a ISO, WIM e IMG</div>
+                <div class="chip">✓ Não altera seu roteador (ProxyDHCP)</div>
+                <div class="chip">✓ Tela de Boot com sua Logo</div>
+            </div>
+
+            <!-- Interactive Live Interface Preview Mockup -->
+            <div class="hero-mockup-wrapper">
+                <div class="mockup-header">
+                    <div class="mockup-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <div class="mockup-title">CyberPXE Deployment Server v2.0 - [Painel Web de Controle em Tempo Real]</div>
+                    <div class="mockup-status">ONLINE 🟢</div>
+                </div>
+                <div class="mockup-screen">
+                    <div class="mockup-stats-bar">
+                        <div class="stat-card">
+                            <span class="stat-val" id="stat-active-pcs">14</span>
+                            <span class="stat-lbl">COMPUTADORES NA BANCADA</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-val text-green">1.0 Gbps</span>
+                            <span class="stat-lbl">VELOCIDADE DE FLUXO</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-val text-cyan">PROXIE DHCP</span>
+                            <span class="stat-lbl">MODO AUTÔNOMO ATIVO</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-val text-yellow">0 ERROS</span>
+                            <span class="stat-lbl">DEPLOY ESTÁVEL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mockup-terminal">
+                        <div class="term-header">
+                            <span>📡 TERMINAL DE EVENTOS DA REDE EM TEMPO REAL</span>
+                            <span class="term-live-tag">LIVE FEED</span>
+                        </div>
+                        <div class="term-body" id="hero-term-feed">
+                            <div class="term-line green">[14:52:10] [DHCP] DHCPOFFER enviado para MAC 1C:39:47:55:37:7A (Dell Optiplex) -> IP: 192.168.15.104</div>
+                            <div class="term-line cyan">[14:52:12] [TFTP] Enviando ipxe-x64.efi para [192.168.15.104] (100% concluído em 0.4s)</div>
+                            <div class="term-line yellow">[14:52:14] [iPXE] Handshake iPXE recebido com sucesso. Carregando menu.ipxe com branding...</div>
+                            <div class="term-line green">[14:52:20] [HTTP] Cliente 192.168.15.104 iniciou boot: [WinPE] Sergei_Strelec_2026.wim via wimboot</div>
+                            <div class="term-line cyan">[14:53:02] [NET] Cliente MAC 00:23:7D:88:12:30 conectou na porta 4 (HP ProDesk) -> Carregando Windows 11 Bypass ISO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points / Comparison -->
+    <section class="section pain-section">
+        <div class="container">
+            <div class="section-badge text-center">A REALIDADE DA SUA BANCADA</div>
+            <h2 class="section-title text-center">Você ainda formata computadores como em 2012?</h2>
+            <p class="section-subtitle text-center">Veja a diferença brutal de tempo e produtividade entre o método antigo e o método CyberPXE:</p>
+
+            <div class="comparison-cards-grid">
+                <!-- The Old Way -->
+                <div class="comp-card card-old">
+                    <div class="comp-badge bad">O JEITO ANTIGO (PENDRIVE)</div>
+                    <ul class="comp-list">
+                        <li>❌ <strong>1 computador por vez:</strong> Você precisa esperar um PC terminar para começar outro.</li>
+                        <li>❌ <strong>Pendrives queimando:</strong> Memórias flash corrompem, esquentam e quebram no meio do processo.</li>
+                        <li>❌ <strong>Portas USB ruins:</strong> Conexões frouxas que travam a instalação em 78% gerando retrabalho.</li>
+                        <li>❌ <strong>Bloqueios do Windows 11:</strong> Ter que burlar TPM e conta Microsoft manualmente com comandos de teclado em cada máquina.</li>
+                        <li>❌ <strong>Bancada lenta e desorganizada:</strong> Dias inteiros para entregar 10 computadores de uma empresa ou lote.</li>
+                    </ul>
+                </div>
+
+                <!-- The CyberPXE Way -->
+                <div class="comp-card card-new">
+                    <div class="comp-badge good">O JEITO CYBERPXE (REDE GIGABIT)</div>
+                    <ul class="comp-list">
+                        <li>⚡ <strong>Até 50 computadores simultâneos:</strong> Conectou o cabo de rede no switch, todos formatam juntos.</li>
+                        <li>⚡ <strong>Zero desgaste de pendrives:</strong> Todas as imagens (.iso, .wim, .img) ficam salvas no seu servidor seguro.</li>
+                        <li>⚡ <strong>Velocidade Gigabit pura:</strong> Instalação limpa através de rede cabeada rápida e sem desconexões.</li>
+                        <li>⚡ <strong>Bypass Total Automático:</strong> Pula TPM 2.0, Secure Boot, RAM mínima e exigência de conta online sozinho.</li>
+                        <li>⚡ <strong>Profissionalismo Máximo:</strong> Seu cliente vê a logo e as cores da sua empresa na tela de boot.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Promo Section -->
+    <section class="section video-section" id="video-demo">
+        <div class="container">
+            <div class="section-badge text-center">DEMONSTRAÇÃO COMPLETA</div>
+            <h2 class="section-title text-center">Veja o CyberPXE em ação na prática</h2>
+            <p class="section-subtitle text-center">Entenda em 2 minutos como ele funciona desde o clique no .exe até o boot do cliente.</p>
+
+            <div class="video-container-card">
+                <div class="interactive-video-player" id="video-player-container">
+                    <div class="player-screen" id="player-screen">
+                        <div class="video-slide active" data-step="1">
+                            <div class="slide-badge">PASSO 01 / 04</div>
+                            <h3>Inicie o CyberPXE no seu Computador</h3>
+                            <p>Abra o executável único com 1 duplo-clique. Ele inicia o DHCP Proxy, TFTP e HTTP sem precisar configurar seu roteador.</p>
+                            <div class="slide-graphic terminal-mini">
+                                <div>[OK] Servidor Proxy DHCP rodando na porta 67 (Detectando BIOS & UEFI)</div>
+                                <div>[OK] Servidor HTTP de Alta Performance na porta 26000</div>
+                                <div>[OK] Painel de Controle Web carregado em http://127.0.0.1:26000</div>
+                            </div>
+                        </div>
+                        <div class="video-slide" data-step="2">
+                            <div class="slide-badge">PASSO 02 / 04</div>
+                            <h3>Adicione suas ISOs, IMGs e WinPE WIM</h3>
+                            <p>Copie Windows 10, Windows 11, Sergei Strelec, Hiren's Boot ou Ubuntu para a pasta <code>/iso/</code>. O sistema detecta tudo instantaneamente.</p>
+                            <div class="slide-graphic iso-list-mini">
+                                <span class="iso-chip">📦 Win11_24H2_Pro.iso (5.2 GB)</span>
+                                <span class="iso-chip">📦 Strelec_WinPE_x64.wim (1.8 GB)</span>
+                                <span class="iso-chip">📦 Ghost_DiskImage.img (850 MB)</span>
+                            </div>
+                        </div>
+                        <div class="video-slide" data-step="3">
+                            <div class="slide-badge">PASSO 03 / 04</div>
+                            <h3>Ligue o Computador Cliente e Pressione F12</h3>
+                            <p>Selecione <strong>Boot via Rede (PXE IPv4)</strong>. A placa-mãe baixa o iPXE pela rede em menos de 1 segundo.</p>
+                            <div class="slide-graphic boot-loading-mini">
+                                <div class="pulse-loader"></div>
+                                <span>DHCP DHCPOFFER recebido -> Carregando boot.ipxe -> Conectado!</span>
+                            </div>
+                        </div>
+                        <div class="video-slide" data-step="4">
+                            <div class="slide-badge">PASSO 04 / 04</div>
+                            <h3>A Tela de Boot Gráfica com a Sua Marca Carrega!</h3>
+                            <p>O menu interativo aparece com seu papel de parede, opções de instalação, Memtest e diagnósticos. Selecione e instale!</p>
+                            <div class="slide-graphic menu-preview-mini">
+                                <div class="menu-head">CYBER-PXE // DEPLOYMENT MATRIX</div>
+                                <div class="menu-opt selected">► [WinPE/WIM] Sergei Strelec 2026 Resgate</div>
+                                <div class="menu-opt">► Instalar Windows 11 Pro 64-bit (Bypass TPM)</div>
+                                <div class="menu-opt">► [0] Boot pelo Disco Local (HD/SSD)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Controls -->
+                    <div class="player-controls">
+                        <button class="player-btn" id="btn-prev-step">⏮ Anterior</button>
+                        <div class="player-progress-bar">
+                            <div class="progress-fill" id="video-progress-fill"></div>
+                        </div>
+                        <button class="player-btn" id="btn-next-step">Próximo ⏭</button>
+                        <button class="player-btn btn-auto" id="btn-toggle-play">⏸ Pausar Apresentação</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Simulator Section -->
+    <section class="section calc-section" id="simulador">
+        <div class="container">
+            <div class="section-badge text-center">SIMULADOR DE RETORNO (ROI)</div>
+            <h2 class="section-title text-center">Quanto tempo e dinheiro o CyberPXE vai te economizar?</h2>
+            <p class="section-subtitle text-center">Selecione um perfil de bancada ou ajuste os seletores e clique em Simular:</p>
+
+            <div class="simulator-presets-wrapper mb-4 text-center" style="margin-bottom: 24px; text-align: center;">
+                <span class="text-xs font-mono text-muted block mb-2 font-bold" style="display:block; margin-bottom: 10px; color: #94a3b8; font-size: 0.8rem; letter-spacing: 1px;">SELECIONE UM PERFIL RÁPIDO DE BANCADA:</span>
+                <div class="simulator-presets" style="display:flex; justify-content:center; gap:8px; flex-wrap:wrap;">
+                    <button type="button" class="preset-btn" onclick="setSimPreset(5, 80, 90, this)">⚙️ Teste Grátis (5 PCs)</button>
+                    <button type="button" class="preset-btn active" onclick="setSimPreset(25, 100, 90, this)">🏢 Bancada Média (25 PCs)</button>
+                    <button type="button" class="preset-btn" onclick="setSimPreset(50, 120, 80, this)">🚀 Assistência Pro (50 PCs)</button>
+                    <button type="button" class="preset-btn" onclick="setSimPreset(100, 150, 90, this)">🏭 Alto Volume (100+ PCs)</button>
+                </div>
+            </div>
+
+            <div class="calculator-card">
+                <div class="calc-inputs">
+                    <div class="calc-group">
+                        <div class="calc-label-row">
+                            <label for="range-pcs">Quantos PCs você formata por mês?</label>
+                            <span class="calc-val-display" id="disp-pcs">25 PCs</span>
+                        </div>
+                        <input type="range" id="range-pcs" min="5" max="200" value="25" step="5" class="custom-range">
+                    </div>
+
+                    <div class="calc-group">
+                        <div class="calc-label-row">
+                            <label for="range-price">Quanto você cobra por formatação?</label>
+                            <span class="calc-val-display" id="disp-price">R$ 100</span>
+                        </div>
+                        <input type="range" id="range-price" min="50" max="300" value="100" step="10" class="custom-range">
+                    </div>
+
+                    <div class="calc-group">
+                        <div class="calc-label-row">
+                            <label for="range-time">Tempo médio gasto por PC no pendrive tradicional:</label>
+                            <span class="calc-val-display" id="disp-time">90 minutos</span>
+                        </div>
+                        <input type="range" id="range-time" min="40" max="150" value="90" step="10" class="custom-range">
+                    </div>
+
+                    <button type="button" class="btn-simulate-calc" id="btn-run-simulation" onclick="recalcSimulation()">
+                        ⚡ SIMULAR ECONOMIA DE BANCADA
+                    </button>
+                </div>
+
+                <div class="calc-results" id="sim-results-box">
+                    <div class="result-box primary" id="box-res-hours">
+                        <span class="res-title">HORAS DE TRABALHO ECONOMIZADAS / MÊS</span>
+                        <span class="res-num text-green" id="res-hours">28 Horas</span>
+                        <small>Mais de 3 dias inteiros de trabalho braçal economizados todo mês!</small>
+                    </div>
+
+                    <div class="result-box" id="box-res-money">
+                        <span class="res-title">CAPACIDADE DE FATURAMENTO EXTRA</span>
+                        <span class="res-num text-cyan" id="res-extra-money">R$ 2.500</span>
+                        <small>Ao atender mais clientes no mesmo tempo sem aumentar sua equipe.</small>
+                    </div>
+
+                    <div class="result-box" id="box-res-payback">
+                        <span class="res-title">RETORNO DO INVESTIMENTO</span>
+                        <span class="res-num text-yellow" id="res-payback">2 FORMATAÇÕES</span>
+                        <small>Com apenas 2 computadores formatados, o CyberPXE já se pagou 100%!</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Breakdown -->
+    <section class="section features-section" id="recursos">
+        <div class="container">
+            <div class="section-badge text-center">RECURSOS DE NÍVEL MILITAR</div>
+            <h2 class="section-title text-center">Construído para quem vive de bancada e TI</h2>
+            <p class="section-subtitle text-center">Todas as ferramentas que você sempre sonhou ter em um único software sem enrolação.</p>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="feat-icon">⚡</div>
+                    <h3>Versão Free (5 PCs) & Licença PRO (Ilimitada)</h3>
+                    <p>A versão gratuita possui trava limitada a até <strong>05 computadores simultâneos</strong> para teste real na bancada. Ao ativar a Licença PRO, a trava é eliminada definitivamente, permitindo formatar 10, 50 ou 100 máquinas em lote simultaneamente.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="feat-icon">🛠️</div>
+                    <h3>Suporte a WinPE Sergei Strelec & WIM</h3>
+                    <p>Suba o lendário Sergei Strelec, Hiren's Boot ou qualquer imagem WIM direto pela rede em segundos utilizando o acelerador <code>wimboot</code> da Microsoft.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="feat-icon">🛡️</div>
+                    <h3>Bypass Windows 11 Automático</h3>
+                    <p>Injeção direta de arquivos Unattend XML que ignoram as exigências de TPM 2.0, Secure Boot, limite de 8GB de RAM e a obrigatoriedade de conta Microsoft.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card">
+                    <div class="feat-icon">🎨</div>
+                    <h3>Branding & Papel de Parede Personalizado</h3>
+                    <p>Coloque a logomarca da sua assistência, seu papel de parede em alta definição, cores customizadas e fontes do Windows na tela de boot dos seus clientes.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card">
+                    <div class="feat-icon">🌐</div>
+                    <h3>ProxyDHCP Inteligente (Plug & Play)</h3>
+                    <p>Não precisa mudar as configurações do roteador do seu cliente ou da sua empresa. O CyberPXE injeta o boot PXE de forma invisível e segura na rede.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card">
+                    <div class="feat-icon">📊</div>
+                    <h3>Terminal de Logs ao Vivo & Deduplicação</h3>
+                    <p>Monitore cada requisição DHCP, TFTP e HTTP em tempo real, com filtros rápidos por MAC/IP, bipe sonoro de conexão e gravação de histórico de sessão.</p>
+                </div>
+
+                <!-- Feature 7 -->
+                <div class="feature-card">
+                    <div class="feat-icon">🔒</div>
+                    <h3>Proteção de Imagens por Senha</h3>
+                    <p>Precisa proteger uma ISO corporativa ou imagem com dados sensíveis? Defina senhas individuais para qualquer sistema diretamente no painel web.</p>
+                </div>
+
+                <!-- Feature 8 -->
+                <div class="feature-card">
+                    <div class="feat-icon">🚀</div>
+                    <h3>Executável 100% Autônomo (.EXE)</h3>
+                    <p>Sem dependências, sem instalar Python, sem mexer com IIS ou Apache. Basta dar duplo clique no executável portátil de 16MB e usar.</p>
+                </div>
+
+                <!-- Feature 9 -->
+                <div class="feature-card">
+                    <div class="feat-icon">⚡</div>
+                    <h3>Wake-on-LAN (WoL) em Massa</h3>
+                    <p>Ligue todos os computadores da bancada com 1 único clique no painel ou envie comandos remotos de reiniciar e desligar sem levantar da sua cadeira.</p>
+                </div>
+
+                <!-- Feature 10 -->
+                <div class="feature-card">
+                    <div class="feat-icon">🛠️</div>
+                    <h3>Toolkit OEM de Pós-Instalação & Drag and Drop</h3>
+                    <p>Arraste e solte instaladores próprios (.exe, .msi) ou use pacotes oficiais Winget. Aplicação silenciosa sem intervenção e personalização com sua marca no Windows.</p>
+                </div>
+
+                <!-- Feature 11 -->
+                <div class="feature-card">
+                    <div class="feat-icon">📲</div>
+                    <h3>Notificações no Telegram</h3>
+                    <p>Receba alertas em tempo real no seu celular quando uma máquina conectar, iniciar o boot ou concluir a instalação com sucesso.</p>
+                </div>
+
+                <!-- Feature 12 -->
+                <div class="feature-card">
+                    <div class="feat-icon">⚡</div>
+                    <h3>Deploy Remoto Zero-Touch</h3>
+                    <p>Envie ordens de instalação de imagem diretamente para qualquer computador conectado na lista de clientes, sem precisar que um técnico vá até a máquina física.</p>
+                </div>
+
+                <!-- Feature 13 -->
+                <div class="feature-card">
+                    <div class="feat-icon">💻</div>
+                    <h3>Emulador Virtual PXE (QEMU) Integrado</h3>
+                    <p>Teste suas ISOs, menus e scripts de boot imediatamente na própria tela do servidor com o emulador virtual integrado, sem gastar tempo ligando cabos ou máquinas de teste físicas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table: CyberPXE vs Competitors -->
+    <section class="section comp-table-section" id="comparativo">
+        <div class="container">
+            <div class="section-badge text-center">TABELA COMPARATIVA</div>
+            <h2 class="section-title text-center">Por que o CyberPXE é imbatível?</h2>
+            <p class="section-subtitle text-center">Compare e veja por que nenhum método tradicional ou concorrente chega perto:</p>
+
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Recursos & Capacidades</th>
+                            <th class="col-highlight">CYBERPXE</th>
+                            <th>PENDRIVE TRADICIONAL</th>
+                            <th>iVENTOY</th>
+                            <th>WDS (MICROSOFT)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Computadores Simultâneos</strong></td>
+                            <td class="col-highlight text-green"><strong>5 PCs (Grátis) / ILIMITADO (PRO)</strong></td>
+                            <td class="text-red">1 por vez</td>
+                            <td class="text-yellow">Trava em 5 (Grátis)</td>
+                            <td>Requer licenças CAL</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sistema Operacional do Servidor</strong></td>
+                            <td class="col-highlight text-green">Qualquer Windows 10/11</td>
+                            <td>N/A</td>
+                            <td>Windows / Linux</td>
+                            <td class="text-red">Exige Windows Server</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Personalização com Sua Marca</strong></td>
+                            <td class="col-highlight text-green">Total (Logo, Wallpapers, Cores)</td>
+                            <td class="text-red">Nenhuma</td>
+                            <td class="text-red">Fixo com marca iVentoy</td>
+                            <td class="text-red">Tela preta padrão</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Suporte a WinPE / Sergei Strelec</strong></td>
+                            <td class="col-highlight text-green">Nativo com Wimboot</td>
+                            <td>Apenas 1 por pendrive</td>
+                            <td class="text-yellow">Instável em WIM puro</td>
+                            <td class="text-red">Apenas WIM homologado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bypass Windows 11 Automático</strong></td>
+                            <td class="col-highlight text-green">Incluso (TPM, Conta, RAM)</td>
+                            <td class="text-yellow">Exige edição de ISO</td>
+                            <td class="text-yellow">Básico</td>
+                            <td class="text-red">Não suportado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Facilidade de Instalação</strong></td>
+                            <td class="col-highlight text-green">1 Executável portátil (.exe)</td>
+                            <td>Gravar ISO por ISO</td>
+                            <td>Binário externo</td>
+                            <td class="text-red">Horas de configuração</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Deploy Remoto Zero-Touch (Pelo Painel)</strong></td>
+                            <td class="col-highlight text-green">Sim (1 Clique na Matriz)</td>
+                            <td class="text-red">Não (Exige operador físico)</td>
+                            <td class="text-red">Não Suportado</td>
+                            <td class="text-yellow">Complexo</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Controle Remoto de Bancada (WoL & Desligar)</strong></td>
+                            <td class="col-highlight text-green">Sim (Botão Circular de Energia)</td>
+                            <td class="text-red">Não</td>
+                            <td class="text-red">Não</td>
+                            <td class="text-red">Não</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Notificações em Tempo Real no Telegram</strong></td>
+                            <td class="col-highlight text-green">Sim (Alertas Push no Celular)</td>
+                            <td class="text-red">Não</td>
+                            <td class="text-red">Não</td>
+                            <td class="text-red">Não</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Emulador de Boot Integrado (QEMU)</strong></td>
+                            <td class="col-highlight text-green">Sim (Testes Virtuais na Tela)</td>
+                            <td class="text-red">Não</td>
+                            <td class="text-red">Não</td>
+                            <td class="text-red">Não</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Personalização Visual com Fontes Windows</strong></td>
+                            <td class="col-highlight text-green">Sim (Fontes Reais + Wallpapers)</td>
+                            <td class="text-red">Não</td>
+                            <td class="text-red">Não</td>
+                            <td class="text-red">Não</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Injeção de Identidade Visual OEM no Windows</strong></td>
+                            <td class="col-highlight text-green">Sim (Logo e Telefone no Sobre)</td>
+                            <td class="text-red">Não</td>
+                            <td class="text-red">Não</td>
+                            <td class="text-yellow">Apenas Sysprep</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Custo / Investimento</strong></td>
+                            <td class="col-highlight text-green"><strong>Acesso Vitalício Único</strong></td>
+                            <td>Gasto constante com pendrives</td>
+                            <td class="text-yellow">US$ 49/ano recorrente</td>
+                            <td class="text-red">R$ 5.000+ em licenças</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos removidos -->
+
+    <!-- Pricing Section -->
+    <section class="section pricing-section" id="precos">
+        <div class="container">
+            <div class="section-badge text-center">ACESSO IMEDIATO</div>
+            <h2 class="section-title text-center">Escolha o plano ideal para a sua bancada</h2>
+            <p class="section-subtitle text-center">Pagamento único sem pegadinhas nem mensalidades. Adquira uma vez e use para sempre.</p>
+
+            <div class="pricing-cards-grid">
+                <!-- Plan 1 -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <span class="plan-tag">TÉCNICO INICIANTE</span>
+                        <h3 class="plan-name">Plano Autônomo</h3>
+                        <p class="plan-desc">Ideal para técnicos que trabalham sozinhos e atendem clientes a domicílio ou pequena bancada.</p>
+                        <div class="plan-price">
+                            <span class="currency">R$</span>
+                            <span class="amount">197</span>
+                            <span class="period">pagamento único</span>
+                        </div>
+                    </div>
+                    <ul class="plan-perks">
+                        <li>✓ <strong>1 Licença Vitalícia</strong> vinculada à máquina</li>
+                        <li>✓ Até <strong>20 computadores simultâneos</strong></li>
+                        <li>✓ Suporte nativo a <strong>ISO e IMG</strong></li>
+                        <li>✓ Injeção de Bypass Windows 11</li>
+                        <li>✓ ProxyDHCP Inteligente integrado</li>
+                        <li>✓ Manual de Início Rápido em PDF</li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20adquirir%20o%20CyberPXE%20Plano%20Aut%C3%B4nomo" class="btn btn-card-outline" target="_blank">GARANTIR PLANO AUTÔNOMO</a>
+                </div>
+
+                <!-- Plan 2 (Highlighted) -->
+                <div class="price-card featured">
+                    <div class="featured-ribbon">MAIS POPULAR ⭐</div>
+                    <div class="price-header">
+                        <span class="plan-tag">BANCADA PROFISSIONAL</span>
+                        <h3 class="plan-name">Plano Assistência Pro</h3>
+                        <p class="plan-desc">O pacote completo para lojas de informática, assistências técnicas e profissionais de alto volume.</p>
+                        <div class="plan-price">
+                            <span class="currency">R$</span>
+                            <span class="amount">297</span>
+                            <span class="period">pagamento único</span>
+                        </div>
+                    </div>
+                    <ul class="plan-perks">
+                        <li>⭐ <strong>Conexões 100% ILIMITADAS</strong> (Sem teto de PCs)</li>
+                        <li>⭐ <strong>Suporte Completo a WIM / Sergei Strelec / Hiren's</strong></li>
+                        <li>⭐ <strong>Personalização White-Label Total</strong> (Sua Logo e Wallpaper)</li>
+                        <li>⭐ Pacote de Temas Exclusivos (Cyberpunk, Matrix, Clean)</li>
+                        <li>⭐ Terminal ao vivo com filtros e bipe sonoro</li>
+                        <li>⭐ Chave Permanente de Hardware</li>
+                        <li>⭐ Suporte Prioritário via WhatsApp</li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20adquirir%20o%20CyberPXE%20Plano%20Bancada%20Pro" class="btn btn-primary pulse-btn" target="_blank">QUERO O PLANO PRO (ILIMITADO)</a>
+                </div>
+
+                <!-- Plan 3 -->
+                <div class="price-card">
+                    <div class="price-header">
+                        <span class="plan-tag">CORPORATIVO & ESCOLAS</span>
+                        <h3 class="plan-name">Plano Multi-Servidor</h3>
+                        <p class="plan-desc">Para empresas com múltiplos servidores, colégios, universidades ou franquias de informática.</p>
+                        <div class="plan-price">
+                            <span class="currency">R$</span>
+                            <span class="amount">597</span>
+                            <span class="period">pagamento único</span>
+                        </div>
+                    </div>
+                    <ul class="plan-perks">
+                        <li>✓ <strong>Até 3 Servidores CyberPXE</strong> autorizados</li>
+                        <li>✓ Conexões Ilimitadas por servidor</li>
+                        <li>✓ Pacote de Implantação e Scripts unattended prontos</li>
+                        <li>✓ Consultoria de Otimização de Rede via AnyDesk/TeamViewer</li>
+                        <li>✓ Emissão de Nota Fiscal para Empresas (CNPJ)</li>
+                        <li>✓ Acesso antecipado a novas atualizações</li>
+                    </ul>
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20do%20CyberPXE%20para%20minha%20empresa" class="btn btn-card-outline" target="_blank">FALAR COM CONSULTOR B2B</a>
+                </div>
+            </div>
+
+            <!-- Guarantee Box -->
+            <div class="guarantee-box">
+                <div class="guarantee-badge">🛡️ 7 DIAS</div>
+                <div class="guarantee-text">
+                    <h4>GARANTIA INCONDICIONAL DE SATISFAÇÃO DE 7 DIAS</h4>
+                    <p>Teste o CyberPXE na sua bancada. Se por qualquer motivo você achar que ele não economizou seu tempo ou não funcionou perfeitamente na sua rede, basta nos enviar uma única mensagem no WhatsApp e devolvemos 100% do seu dinheiro na hora. Sem perguntas e sem ressentimentos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section" id="faq">
+        <div class="container">
+            <div class="section-badge text-center">TIRE SUAS DÚVIDAS</div>
+            <h2 class="section-title text-center">Perguntas Frequentes (FAQ)</h2>
+            <p class="section-subtitle text-center">Tudo o que você precisa saber antes de adquirir o CyberPXE:</p>
+
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>A versão gratuita possui trava de computadores?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Sim!</strong> A versão gratuita possui sim uma trava que limita o uso a até <strong>05 computadores simultâneos</strong> na bancada, permitindo que você teste o boot PXE, DHCP e ISOs sem pagar nada. Ao adquirir a <strong>Licença PRO</strong>, essa trava é permanentemente removida, liberando computadores 100% ilimitados, além de desbloquear Wake-on-LAN, Deploy Remoto Zero-Touch, Notificações Telegram e personalização da tela de boot.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Preciso mexer no roteador da minha empresa ou do cliente?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Não!</strong> O CyberPXE possui a tecnologia <strong>ProxyDHCP</strong>. Ele detecta os computadores que pedem boot na rede e responde apenas a eles sem interferir nos IPs ou no DHCP padrão do seu roteador (você não precisa trocar gateway, DNS nem desligar seu Wi-Fi).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Meu servidor pode estar no Wi-Fi enquanto os clientes estão no cabo?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Para o servidor CyberPXE, a melhor prática é que ele esteja conectado via <strong>cabo de rede (Ethernet)</strong> no mesmo switch onde os clientes estão plugados. Isso garante velocidade máxima Gigabit e evita que pacotes de broadcast do PXE sejam filtrados pelo ponto de acesso Wi-Fi.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Qual opção de boot escolho na placa-mãe do cliente: PXE IPv4 ou PXE IPv6?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Escolha sempre <strong>PXE IPv4</strong>. O CyberPXE opera nativamente na pilha IPv4, garantindo 100% de compatibilidade tanto com placas-mãe antigas BIOS Legacy quanto com UEFI modernas de 64 bits.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como funciona com arquivos .WIM e Sergei Strelec?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O CyberPXE já vem com a cadeia oficial de boot da Microsoft (BCD, boot.sdi, bootmgr e bootmgfw.efi) pré-configurada em <code>boot/wim_assets/</code>. Você só precisa colocar o arquivo <code>.wim</code> na pasta <code>iso/</code> que ele é carregado diretamente na memória RAM do cliente pelo <code>wimboot</code> em segundos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Como recebo a minha chave de ativação?</span>
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Assim que abrir o programa, ele exibirá o seu <strong>Machine ID</strong> de hardware exclusivo. Você nos envia esse código e geramos a sua <strong>Chave de Licença Permanente</strong> imediatamente via WhatsApp ou e-mail.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="brand">
+                    <div class="brand-icon">⚡</div>
+                    <div class="brand-text">
+                        <span class="brand-name">CYBER<span>PXE</span></span>
+                        <span class="brand-sub">DEPLOYMENT MATRIX</span>
+                    </div>
+                </div>
+                <p>A solução definitiva de formatação em massa e implantação PXE para bancadas de assistência técnica, escolas e empresas.</p>
+                <div class="copyright">© 2026 CyberPXE Technologies. Todos os direitos reservados.</div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegação Rápida</h4>
+                <ul>
+                    <li><a href="#recursos">Recursos do Sistema</a></li>
+                    <li><a href="#comparativo">Comparativo Técnico</a></li>
+                    <li><a href="#calculadora">Calculadora de Lucro</a></li>
+                    <li><a href="#precos">Planos e Preços</a></li>
+                    <li><a href="#faq">Dúvidas Frequentes</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-cta">
+                <h4>Atendimento Direto</h4>
+                <p>Dúvidas comerciais ou suporte técnico pré-venda:</p>
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20o%20CyberPXE" class="btn btn-whatsapp" target="_blank">
+                    <span>💬 Falar no WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Tenho%20interesse%20no%20CyberPXE" class="floating-wa" target="_blank" title="Falar com Suporte">
+        💬
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
